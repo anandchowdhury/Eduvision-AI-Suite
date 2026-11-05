@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import sqlite3
 import random
@@ -12,8 +13,8 @@ import gradio as gr
 # =====================================================================
 PROJECT_NAME = "Eduvision AI Suite"
 ORGANIZATION = "Eduvision Project Group (in partnership with Anant-OmniCore Systems)"
-COPYRIGHT_NOTICE = "© 2026 Ananda Chowdhury, Aaryan Chowdhury & Diya. All Rights Reserved."
-LICENSE_TYPE = "Open for Academic & Professional Review • Commercial Inquiries Welcome"
+COPYRIGHT_NOTICE = "Copyright (c) 2026 Ananda Chowdhury, Aaryan Chowdhury & Diya. All Rights Reserved."
+LICENSE_TYPE = "Open for Academic & Professional Review - Commercial Inquiries Welcome"
 
 TEAM_MEMBERS = [
     {
@@ -193,7 +194,7 @@ with gr.Blocks(css=custom_css, title="Eduvision AI Suite") as demo:
     gr.HTML(
         f"""
         <div class="header-box">
-            <img src="file=Logo.png" alt="Anant Logo" class="header-logo" onerror="this.style.display='none'">
+            <img src="file=Logo.png.jpeg" alt="Eduvision Logo" class="header-logo" onerror="this.style.display='none'">
             <h1 class="header-title">EDUVISION AI SUITE v1.0</h1>
             <p class="creator-badge">Engineered by <b>Ananda Chowdhury, Aaryan Chowdhury & Diya</b></p>
             <p style="color: #64748b; font-size: 0.95em;">Multimodal AI Framework & Secure Academic Intelligence Platform</p>
@@ -266,4 +267,4 @@ with gr.Blocks(css=custom_css, title="Eduvision AI Suite") as demo:
 # =====================================================================
 if __name__ == "__main__":
     print(f"Launching {PROJECT_NAME}...")
-    demo.launch(share=True, show_error=True)
+    demo.launch(server_name="0.0.0.0", server_port=7860, show_error=True)
